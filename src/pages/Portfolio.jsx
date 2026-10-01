@@ -179,7 +179,7 @@ export default function Portfolio() {
 
             const response =
                 await fetch(
-                    `${API}/portfolio/analytics`,
+                    `${API}/api/portfolio/analytics`,
                     {
                         method: "GET",
 
@@ -196,6 +196,19 @@ export default function Portfolio() {
 
             const responseText =
                 await response.text();
+
+
+            if (response.status === 401) {
+
+                localStorage.removeItem("token");
+                localStorage.removeItem("user");
+
+                navigate("/login");
+
+                throw new Error(
+                    "Your session has expired. Please login again."
+                );
+            }
 
 
             if (!response.ok) {
@@ -338,7 +351,7 @@ export default function Portfolio() {
 
                         const response =
                             await fetch(
-                                `${API}/crypto/search?query=${encodeURIComponent(
+                                `${API}/api/crypto/search?query=${encodeURIComponent(
                                     query
                                 )}`,
                                 {
@@ -501,7 +514,7 @@ export default function Portfolio() {
 
             const response =
                 await fetch(
-                    `${API}/crypto/${encodeURIComponent(
+                    `${API}/api/crypto/${encodeURIComponent(
                         coin.id
                     )}`
                 );
@@ -741,7 +754,7 @@ export default function Portfolio() {
 
             const response =
                 await fetch(
-                    `${API}/portfolio`,
+                    `${API}/api/portfolio`,
                     {
                         method: "POST",
 
@@ -767,6 +780,19 @@ export default function Portfolio() {
 
             const responseText =
                 await response.text();
+
+
+            if (response.status === 401) {
+
+                localStorage.removeItem("token");
+                localStorage.removeItem("user");
+
+                navigate("/login");
+
+                throw new Error(
+                    "Your session has expired. Please login again."
+                );
+            }
 
 
             if (!response.ok) {
@@ -895,7 +921,7 @@ export default function Portfolio() {
 
             const response =
                 await fetch(
-                    `${API}/portfolio/${id}`,
+                    `${API}/api/portfolio/${id}`,
                     {
                         method: "DELETE",
 
@@ -909,6 +935,19 @@ export default function Portfolio() {
 
             const responseText =
                 await response.text();
+
+
+            if (response.status === 401) {
+
+                localStorage.removeItem("token");
+                localStorage.removeItem("user");
+
+                navigate("/login");
+
+                throw new Error(
+                    "Your session has expired. Please login again."
+                );
+            }
 
 
             if (!response.ok) {
