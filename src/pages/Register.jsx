@@ -23,7 +23,7 @@ function Register() {
     try {
 
       const response = await fetch(
-        "http://localhost:8080/api/users",
+        "https://cryptotrack-backend-mgou.onrender.com/api/users",
         {
           method: "POST",
 

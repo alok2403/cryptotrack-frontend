@@ -12,8 +12,7 @@ import {
 import Navbar from "../components/Navbar";
 
 
-const API =
-    "http://localhost:8080/api";
+const API = "https://cryptotrack-backend-mgou.onrender.com";
 
 
 const EMPTY_FORM = {

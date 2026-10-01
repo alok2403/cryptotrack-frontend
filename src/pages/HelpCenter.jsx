@@ -146,7 +146,7 @@ export default function HelpCenter() {
             setSubmitting(true);
 
             const response = await fetch(
-                "http://localhost:8080/api/support",
+                "https://cryptotrack-backend-mgou.onrender.com/api/support",
                 {
                     method: "POST",
 

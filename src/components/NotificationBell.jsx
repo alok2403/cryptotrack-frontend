@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API = "http://localhost:8080/api/notifications";
+const API = "https://cryptotrack-backend-mgou.onrender.com/api/notifications";
 
 export default function NotificationBell() {
 

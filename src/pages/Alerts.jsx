@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 
 const API =
-    "http://localhost:8080/api/alerts";
+    "https://cryptotrack-backend-mgou.onrender.com/api/alerts";
 
 
 const emptyForm = {

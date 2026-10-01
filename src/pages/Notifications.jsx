@@ -1,7 +1,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-const API_BASE = "http://localhost:8080/api/notifications";
+const API_BASE = "https://cryptotrack-backend-mgou.onrender.com/api/notifications";
 
 export default function Notifications() {
     const [notifications, setNotifications] = useState([]);

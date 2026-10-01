@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = "http://localhost:8080/api/crypto";
+const API_BASE = "https://cryptotrack-backend-mgou.onrender.com/api/crypto";
 
 const DEFAULT_COINS = [
     "bitcoin",
