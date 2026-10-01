@@ -198,19 +198,6 @@ export default function Portfolio() {
                 await response.text();
 
 
-            if (response.status === 401) {
-
-                localStorage.removeItem("token");
-                localStorage.removeItem("user");
-
-                navigate("/login");
-
-                throw new Error(
-                    "Your session has expired. Please login again."
-                );
-            }
-
-
             if (!response.ok) {
 
                 let message =
@@ -782,19 +769,6 @@ export default function Portfolio() {
                 await response.text();
 
 
-            if (response.status === 401) {
-
-                localStorage.removeItem("token");
-                localStorage.removeItem("user");
-
-                navigate("/login");
-
-                throw new Error(
-                    "Your session has expired. Please login again."
-                );
-            }
-
-
             if (!response.ok) {
 
                 let message =
@@ -935,19 +909,6 @@ export default function Portfolio() {
 
             const responseText =
                 await response.text();
-
-
-            if (response.status === 401) {
-
-                localStorage.removeItem("token");
-                localStorage.removeItem("user");
-
-                navigate("/login");
-
-                throw new Error(
-                    "Your session has expired. Please login again."
-                );
-            }
 
 
             if (!response.ok) {
