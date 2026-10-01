@@ -1,0 +1,151 @@
+/* =========================================================
+   CRYPTOTRACK - LIGHT THEME (global)
+   Replace src/index.css with this file.
+========================================================= */
+
+:root {
+    color-scheme: light;
+
+    --bg: #f1f5f9;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent: #4f46e5;
+    --up: #059669;
+    --down: #dc2626;
+
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 320px;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%) fixed;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+#root {
+    min-height: 100vh;
+    text-align: left;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Form controls ---------- */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+option {
+    background: #ffffff;
+    color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #818cf8 !important;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+button {
+    transition: background-color 0.15s ease, border-color 0.15s ease,
+        box-shadow 0.15s ease, filter 0.15s ease, transform 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+    filter: brightness(0.97);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ---------- Classes the pages rely on ---------- */
+
+.positive {
+    color: var(--up);
+}
+
+.negative {
+    color: var(--down);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes aiSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* ---------- Scrollbar / selection ---------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+::selection {
+    background: rgba(79, 70, 229, 0.18);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1050px) {
+    body { overflow-x: hidden; }
+}
+
+@media (max-width: 850px) {
+    nav { overflow-x: auto; }
+}
